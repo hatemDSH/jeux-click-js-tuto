@@ -1,0 +1,194 @@
+<!DOCTYPE>
+<html>
+<head>
+   <title> BBC </title> 
+   <meta charset="utf-8"/>
+
+   <style type="text/css">
+     
+     .Titre{
+         
+         color: blue;
+
+     }
+     #circle{
+
+        width: 100px ;
+        height: 100px ;
+        border-radius: 50px;
+        background-color: crimson ;
+        float: left;
+     }
+     #rectangle{
+
+width: 100px ;
+height: 100px ;
+background-color: crimson ;
+ /* float: left; */
+} 
+      #circle1{
+
+        width: 100px ;
+        height: 100px ;
+        border-radius: 100px;
+        background-color:cornflowerblue;
+        /* float: left;*/
+     }
+
+   
+     #rectangle1{
+
+        width: 100px ;
+        height: 100px ;
+        background-color: cornflowerblue ;
+        /* float: left;*/
+     }
+     #contenu{
+
+       /* width:100% ; 
+      float: left;  */ 
+     }
+    #footer{
+      clear: both;
+    }
+   </style>
+
+   
+</head>
+<body> 
+
+   <div id="container">
+      <div id="topbar">
+             <div class="Titre" > <h1> Bien venu sur notre formation JAVA SCRIPT </h1> </div>
+   <div> 
+     
+    <hr> 
+
+    <button id="textChanger"> Change first div text </button>
+
+     <div id="firstDiv"> This is some text </div>
+
+    <button id="textAppender"> Append some text  </button>
+
+    <div id="secondDiv"> Javascript is ..  </div>
+
+    <button id="textCreator"> Create some text  </button>
+    
+    <div id="emptyDiv"> </div>
+
+    <br><br>
+
+    <button id="tryit"  onclick= "myfunction()" > try it   </button>
+    
+    <div id="contenu" >  
+    <div id="circle"></div>
+    <div id="circle1"></div>
+    <div id="rectangle"></div>
+    <div id="rectangle1"></div>
+
+  </div>
+  <br> <br>
+  <input id="myInput" type="text" value="test" />
+  <button id="stylesChanger">Change the text!</button>
+  <div id="firstDiv1">This is some text</div>
+
+   <div id="footer"></div>
+    
+  </div>
+
+  <script type="text/javascript" >
+
+  // button  chager div 
+
+    document.getElementById("textChanger").onclick =function() {
+
+          document.getElementById("firstDiv").innerHTML = "This is awesome!"
+
+    }
+
+    // button appende text 
+
+    document.getElementById("textAppender").onclick = function () {
+
+      document.getElementById("secondDiv").innerHTML += document.getElementById("secondDiv").innerHTML + "great!!" ;
+
+    }
+
+    // 
+
+   document.getElementById("textCreator").onclick = function () {
+
+      document.getElementById("emptyDiv").innerHTML  += "<ul> <li> Dog </li> <li> Cat  </li> </ul>" ;
+   }
+
+
+    
+   document.getElementById("circle").onclick = function () {
+
+     document.getElementById("circle").style.display = "none";
+    /*  document.getElementById("circle1").style.display = "none";
+     document.getElementById("rectangle").style.display = "none";
+     document.getElementById("rectangle1").style.display = "none";*/ 
+   }
+
+     document.getElementById("circle1").onclick = function () {
+
+
+document.getElementById("circle1").style.display = "none";
+
+}
+
+  document.getElementById("rectangle").onclick = function () {
+
+document.getElementById("rectangle").style.display = "none";
+
+}
+
+  document.getElementById("rectangle1").onclick = function () {
+
+document.getElementById("rectangle1").style.display = "none";
+}
+
+    function myfunction () {
+      /*
+      var x = document.getElementById('circle');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }/*
+    /* */
+     //   y = document.getElementById("tryit")
+      var  x =  document.getElementById('circle') ;
+
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+          console.log('block');
+
+        }else {
+          x.style.display = 'none' ;
+          console.log('none');
+        }
+       //  */
+
+       
+   
+       var newText=document.getElementById("myInput").value;
+         document.getElementById("stylesChanger").onclick=function() {
+         newText=document.getElementById("myInput").value;
+         document.getElementById("firstDiv1").innerHTML=newText;
+}
+    }
+
+
+
+
+
+
+
+  
+  </script>
+
+
+</body> 
+</html>

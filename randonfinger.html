@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<title>Learning Javascript</title>
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+
+
+<div>  how is finger holding up  </div>
+<input id="anwser"  type="text">
+<button id="Chercher" > Submit </button>
+
+<hr> 
+
+<div> Comment compter nombre de main  </div>
+
+<input id="nombre" >
+<button id="click"> Go </button>
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+    function alertFun() {
+
+        alert (' hi hatem '); 
+    }
+
+    alertFun() ;
+
+ var x = Math.random();
+  x = x * 6;
+  x = Math.floor(x);
+  
+  document.getElementById("Chercher").onclick = function () {
+
+      if ( x == document.getElementById("anwser").value) {
+
+            alert("It is correct") ;
+
+      }
+
+      else {
+
+          alert ("It is wrong  the correct anwser is " + x ) ;
+      }
+
+
+  }
+    
+</script>
+
+</body>
+</html>
